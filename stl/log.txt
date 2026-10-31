@@ -1,0 +1,886 @@
+h.cpp: In function ‘int main()’:
+h.cpp:52:40: error: no match for ‘operator!=’ (operand types are ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ and ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’)
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                      ~ ^~ ~~~~~~
+      |                                      |    |
+      |                                      |    __gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>
+      |                                      std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >
+In file included from /usr/include/c++/13/regex:68,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:181,
+                 from h.cpp:3:
+/usr/include/c++/13/bits/regex.h:1132:5: note: candidate: ‘template<class _BiIter> bool std::__cxx11::operator!=(const sub_match<_BiIter>&, const sub_match<_BiIter>&)’
+ 1132 |     operator!=(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1132:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1212:5: note: candidate: ‘template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator!=(__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const sub_match<_BiIter>&)’
+ 1212 |     operator!=(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1212:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1305:5: note: candidate: ‘template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator!=(const sub_match<_BiIter>&, __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)’
+ 1305 |     operator!=(const sub_match<_Bi_iter>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1305:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1379:5: note: candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator!=(const typename std::iterator_traits<_Iter>::value_type*, const sub_match<_BiIter>&)’
+ 1379 |     operator!=(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1379:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1473:5: note: candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator!=(const sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)’
+ 1473 |     operator!=(const sub_match<_Bi_iter>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1473:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1547:5: note: candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator!=(const typename std::iterator_traits<_Iter>::value_type&, const sub_match<_BiIter>&)’
+ 1547 |     operator!=(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1547:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:1647:5: note: candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator!=(const sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)’
+ 1647 |     operator!=(const sub_match<_Bi_iter>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:1647:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/regex.h:2213:5: note: candidate: ‘template<class _Bi_iter, class _Alloc> bool std::__cxx11::operator!=(const match_results<_BiIter, _Alloc>&, const match_results<_BiIter, _Alloc>&)’
+ 2213 |     operator!=(const match_results<_Bi_iter, _Alloc>& __m1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/regex.h:2213:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::match_results<_BiIter, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/unordered_map:46,
+                 from /usr/include/c++/13/functional:63,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:53:
+/usr/include/c++/13/debug/unordered_map:863:5: note: candidate: ‘template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::__debug::operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Allocator>&, const unordered_map<_Key, _Tp, _Hash, _Pred, _Allocator>&)’
+  863 |     operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/unordered_map:863:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::unordered_map<_Key, _Tp, _Hash, _Pred, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/debug/unordered_map:1580:5: note: candidate: ‘template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::__debug::operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Allocator>&, const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Allocator>&)’
+ 1580 |     operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/unordered_map:1580:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::unordered_multimap<_Key, _Tp, _Hash, _Pred, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/vector:76,
+                 from /usr/include/c++/13/functional:64:
+/usr/include/c++/13/debug/vector:762:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__debug::operator!=(const vector<_Tp, _Alloc>&, const vector<_Tp, _Alloc>&)’
+  762 |     operator!=(const vector<_Tp, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/vector:762:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::vector<_Tp, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/deque:72,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:139:
+/usr/include/c++/13/debug/deque:684:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__debug::operator!=(const deque<_Tp, _Allocator>&, const deque<_Tp, _Allocator>&)’
+  684 |     operator!=(const deque<_Tp, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/deque:684:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::deque<_Tp, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/list:69,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:150:
+/usr/include/c++/13/debug/list:937:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__debug::operator!=(const list<_Tp, _Allocator>&, const list<_Tp, _Allocator>&)’
+  937 |     operator!=(const list<_Tp, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/list:937:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::list<_Tp, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/debug/map:43,
+                 from /usr/include/c++/13/map:69,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:152:
+/usr/include/c++/13/debug/map.h:762:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Allocator> bool std::__debug::operator!=(const map<_Key, _Tp, _Compare, _Allocator>&, const map<_Key, _Tp, _Compare, _Allocator>&)’
+  762 |     operator!=(const map<_Key, _Tp, _Compare, _Allocator>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/map.h:762:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::map<_Key, _Tp, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/debug/map:44:
+/usr/include/c++/13/debug/multimap.h:644:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Allocator> bool std::__debug::operator!=(const multimap<_Key, _Tp, _Compare, _Allocator>&, const multimap<_Key, _Tp, _Compare, _Allocator>&)’
+  644 |     operator!=(const multimap<_Key, _Tp, _Compare, _Allocator>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/multimap.h:644:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::multimap<_Key, _Tp, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/debug/set:41,
+                 from /usr/include/c++/13/set:69,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:158:
+/usr/include/c++/13/debug/set.h:624:5: note: candidate: ‘template<class _Key, class _Compare, class _Allocator> bool std::__debug::operator!=(const set<_Key, _Compare, _Allocator>&, const set<_Key, _Compare, _Allocator>&)’
+  624 |     operator!=(const set<_Key, _Compare, _Allocator>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/set.h:624:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::set<_Key, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/debug/set:42:
+/usr/include/c++/13/debug/multiset.h:614:5: note: candidate: ‘template<class _Key, class _Compare, class _Allocator> bool std::__debug::operator!=(const multiset<_Key, _Compare, _Allocator>&, const multiset<_Key, _Compare, _Allocator>&)’
+  614 |     operator!=(const multiset<_Key, _Compare, _Allocator>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/multiset.h:614:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::multiset<_Key, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/forward_list:45,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:175:
+/usr/include/c++/13/debug/forward_list:884:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__debug::operator!=(const forward_list<_Tp, _Allocator>&, const forward_list<_Tp, _Allocator>&)’
+  884 |     operator!=(const forward_list<_Tp, _Alloc>& __lx,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/forward_list:884:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::forward_list<_Tp, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/unordered_set:46,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:189:
+/usr/include/c++/13/debug/unordered_set:730:5: note: candidate: ‘template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::__debug::operator!=(const unordered_set<_Tp, _Hash, _Pred, _Allocator>&, const unordered_set<_Tp, _Hash, _Pred, _Allocator>&)’
+  730 |     operator!=(const unordered_set<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/unordered_set:730:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::unordered_set<_Tp, _Hash, _Pred, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/debug/unordered_set:1407:5: note: candidate: ‘template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::__debug::operator!=(const unordered_multiset<_Tp, _Hash, _Pred, _Allocator>&, const unordered_multiset<_Tp, _Hash, _Pred, _Allocator>&)’
+ 1407 |     operator!=(const unordered_multiset<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/debug/unordered_set:1407:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__debug::unordered_multiset<_Tp, _Hash, _Pred, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/stl_algobase.h:64,
+                 from /usr/include/c++/13/algorithm:60,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:51:
+/usr/include/c++/13/bits/stl_pair.h:842:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator!=(const pair<_T1, _T2>&, const pair<_T1, _T2>&)’
+  842 |     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_pair.h:842:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::pair<_T1, _T2>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/stl_algobase.h:67:
+/usr/include/c++/13/bits/stl_iterator.h:462:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)’
+  462 |     operator!=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:462:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:507:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)’
+  507 |     operator!=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:507:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::reverse_iterator<_IteratorR>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1697:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)’
+ 1697 |     operator!=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1697:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::move_iterator<_IteratorL>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1763:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)’
+ 1763 |     operator!=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_iterator.h:1763:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::move_iterator<_IteratorL>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/char_traits.h:42,
+                 from /usr/include/c++/13/string:42,
+                 from /usr/include/c++/13/bitset:52,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:52:
+/usr/include/c++/13/bits/postypes.h:197:5: note: candidate: ‘template<class _StateT> bool std::operator!=(const fpos<_StateT>&, const fpos<_StateT>&)’
+  197 |     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/postypes.h:197:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::fpos<_StateT>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/string:43:
+/usr/include/c++/13/bits/allocator.h:245:5: note: candidate: ‘template<class _T1, class _T2> bool std::operator!=(const allocator<_CharT>&, const allocator<_T2>&)’
+  245 |     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/allocator.h:245:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::allocator<_CharT>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/basic_string.h:47,
+                 from /usr/include/c++/13/string:54:
+/usr/include/c++/13/string_view:649:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator!=(basic_string_view<_CharT, _Traits>, basic_string_view<_CharT, _Traits>)’
+  649 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/string_view:649:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/string_view:656:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator!=(basic_string_view<_CharT, _Traits>, __type_identity_t<basic_string_view<_CharT, _Traits> >)’
+  656 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/string_view:656:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/string_view:664:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator!=(__type_identity_t<basic_string_view<_CharT, _Traits> >, basic_string_view<_CharT, _Traits>)’
+  664 |     operator!=(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/string_view:664:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/basic_string.h:3788:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const __cxx11::basic_string<_CharT, _Traits, _Allocator>&, const __cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 3788 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/basic_string.h:3788:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/basic_string.h:3802:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const __cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 3802 |     operator!=(const _CharT* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/basic_string.h:3802:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   mismatched types ‘const _CharT*’ and ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/basic_string.h:3815:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const __cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)’
+ 3815 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/basic_string.h:3815:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/memory_resource.h:47,
+                 from /usr/include/c++/13/string:58:
+/usr/include/c++/13/tuple:1974:5: note: candidate: ‘template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const tuple<_UTypes ...>&, const tuple<_UTypes ...>&)’
+ 1974 |     operator!=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+/usr/include/c++/13/tuple:1974:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::tuple<_UTypes ...>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/functional:59:
+/usr/include/c++/13/bits/std_function.h:755:5: note: candidate: ‘template<class _Res, class ... _Args> bool std::operator!=(const function<_Res(_ArgTypes ...)>&, nullptr_t)’
+  755 |     operator!=(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/std_function.h:755:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/std_function.h:761:5: note: candidate: ‘template<class _Res, class ... _Args> bool std::operator!=(nullptr_t, const function<_Res(_ArgTypes ...)>&)’
+  761 |     operator!=(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/std_function.h:761:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/functional:65:
+/usr/include/c++/13/array:326:5: note: candidate: ‘template<class _Tp, long unsigned int _Nm> bool std::operator!=(const array<_Tp, _Nm>&, const array<_Tp, _Nm>&)’
+  326 |     operator!=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+/usr/include/c++/13/array:326:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::array<_Tp, _Nm>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/iterator:66,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:54:
+/usr/include/c++/13/bits/streambuf_iterator.h:242:5: note: candidate: ‘template<class _CharT, class _Traits> bool std::operator!=(const istreambuf_iterator<_CharT, _Traits>&, const istreambuf_iterator<_CharT, _Traits>&)’
+  242 |     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/streambuf_iterator.h:242:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/memory:78,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:56:
+/usr/include/c++/13/bits/unique_ptr.h:853:5: note: candidate: ‘template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator!=(const unique_ptr<_Tp, _Dp>&, const unique_ptr<_Up, _Ep>&)’
+  853 |     operator!=(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unique_ptr.h:853:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/unique_ptr.h:861:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator!=(const unique_ptr<_Tp, _Dp>&, nullptr_t)’
+  861 |     operator!=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unique_ptr.h:861:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/unique_ptr.h:868:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator!=(nullptr_t, const unique_ptr<_Tp, _Dp>&)’
+  868 |     operator!=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unique_ptr.h:868:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/bits/shared_ptr.h:53,
+                 from /usr/include/c++/13/memory:80:
+/usr/include/c++/13/bits/shared_ptr_base.h:1824:5: note: candidate: ‘template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const __shared_ptr<_Tp1, _Lp>&, const __shared_ptr<_Tp2, _Lp>&)’
+ 1824 |     operator!=(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1824:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__shared_ptr<_Tp1, _Lp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1830:5: note: candidate: ‘template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const __shared_ptr<_Tp, _Lp>&, nullptr_t)’
+ 1830 |     operator!=(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1830:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1835:5: note: candidate: ‘template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(nullptr_t, const __shared_ptr<_Tp, _Lp>&)’
+ 1835 |     operator!=(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1835:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:588:5: note: candidate: ‘template<class _Tp, class _Up> bool std::operator!=(const shared_ptr<_Tp>&, const shared_ptr<_Tp>&)’
+  588 |     operator!=(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:588:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::shared_ptr<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:594:5: note: candidate: ‘template<class _Tp> bool std::operator!=(const shared_ptr<_Tp>&, nullptr_t)’
+  594 |     operator!=(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:594:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::shared_ptr<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:600:5: note: candidate: ‘template<class _Tp> bool std::operator!=(nullptr_t, const shared_ptr<_Tp>&)’
+  600 |     operator!=(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:600:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::shared_ptr<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:67:
+/usr/include/c++/13/scoped_allocator:516:5: note: candidate: ‘template<class _OutA1, class _OutA2, class ... _InA> bool std::operator!=(const scoped_allocator_adaptor<_OutA1, _InA ...>&, const scoped_allocator_adaptor<_InnerHead, _InnerTail ...>&)’
+  516 |     operator!=(const scoped_allocator_adaptor<_OutA1, _InA...>& __a,
+      |     ^~~~~~~~
+/usr/include/c++/13/scoped_allocator:516:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::scoped_allocator_adaptor<_OutA1, _InA ...>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:79:
+/usr/include/c++/13/optional:1245:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_ne_t<_Tp, _Up> std::operator!=(const optional<_Tp>&, const optional<_Up>&)’
+ 1245 |     operator!=(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/13/optional:1245:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::optional<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/optional:1312:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator!=(const optional<_Tp>&, nullopt_t)’
+ 1312 |     operator!=(const optional<_Tp>& __lhs, nullopt_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/optional:1312:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::optional<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/optional:1317:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator!=(nullopt_t, const optional<_Tp>&)’
+ 1317 |     operator!=(nullopt_t, const optional<_Tp>& __rhs) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/13/optional:1317:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::optional<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/optional:1376:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_ne_t<_Tp, _Up> std::operator!=(const optional<_Tp>&, const _Up&)’
+ 1376 |     operator!=(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/13/optional:1376:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::optional<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/optional:1382:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_ne_t<_Up, _Tp> std::operator!=(const _Up&, const optional<_Tp>&)’
+ 1382 |     operator!=(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/13/optional:1382:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::optional<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:80:
+/usr/include/c++/13/variant:1267:3: note: candidate: ‘template<class ... _Types> constexpr bool std::operator!=(const variant<_Types ...>&, const variant<_Types ...>&)’
+ 1267 |   _VARIANT_RELATION_FUNCTION_TEMPLATE(!=, not_equal)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/variant:1267:3: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::variant<_Types ...>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:127:
+/usr/include/c++/13/complex:486:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator!=(const complex<_Tp>&, const complex<_Tp>&)’
+  486 |     operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/complex:486:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::complex<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/complex:491:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator!=(const complex<_Tp>&, const _Tp&)’
+  491 |     operator!=(const complex<_Tp>& __x, const _Tp& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/complex:491:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::complex<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/complex:496:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator!=(const _Tp&, const complex<_Tp>&)’
+  496 |     operator!=(const _Tp& __x, const complex<_Tp>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/complex:496:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::complex<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/queue:66,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:157:
+/usr/include/c++/13/bits/stl_queue.h:406:5: note: candidate: ‘template<class _Tp, class _Seq> bool std::operator!=(const queue<_Tp, _Seq>&, const queue<_Tp, _Seq>&)’
+  406 |     operator!=(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_queue.h:406:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::queue<_Tp, _Seq>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/stack:63,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:160:
+/usr/include/c++/13/bits/stl_stack.h:382:5: note: candidate: ‘template<class _Tp, class _Seq> bool std::operator!=(const stack<_Tp, _Seq>&, const stack<_Tp, _Seq>&)’
+  382 |     operator!=(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_stack.h:382:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::stack<_Tp, _Seq>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/valarray:605,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:166:
+/usr/include/c++/13/bits/valarray_after.h:418:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const _Expr<_Dom1, typename _Dom1::value_type>&, const _Expr<_Dom2, typename _Dom2::value_type>&)’
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, struct std::__not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const _Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, struct std::__not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const typename _Dom::value_type&, const _Expr<_Dom1, typename _Dom1::value_type>&)’
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, struct std::__not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const _Expr<_Dom1, typename _Dom1::value_type>&, const valarray<typename _Dom::value_type>&)’
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, struct std::__not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const valarray<typename _Dom::value_type>&, const _Expr<_Dom1, typename _Dom1::value_type>&)’
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, struct std::__not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/valarray:1209:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const valarray<_Tp>&, const valarray<_Tp>&)’
+ 1209 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/valarray:1209:1: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::valarray<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/valarray:1209:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const valarray<_Tp>&, const typename valarray<_Tp>::value_type&)’
+ 1209 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/valarray:1209:1: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::valarray<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/valarray:1209:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const typename valarray<_Tp>::value_type&, const valarray<_Tp>&)’
+ 1209 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/valarray:1209:1: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::valarray<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/random:51,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:179:
+/usr/include/c++/13/bits/random.h:443:5: note: candidate: ‘template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> bool std::operator!=(const linear_congruential_engine<_UIntType, __a, __c, __m>&, const linear_congruential_engine<_UIntType, __a, __c, __m>&)’
+  443 |     operator!=(const std::linear_congruential_engine<_UIntType, __a,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:443:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:685:5: note: candidate: ‘template<class _UIntType, long unsigned int __w, long unsigned int __n, long unsigned int __m, long unsigned int __r, _UIntType __a, long unsigned int __u, _UIntType __d, long unsigned int __s, _UIntType __b, long unsigned int __t, _UIntType __c, long unsigned int __l, _UIntType __f> bool std::operator!=(const mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&, const mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)’
+  685 |     operator!=(const std::mersenne_twister_engine<_UIntType, __w, __n, __m,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:685:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:891:5: note: candidate: ‘template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r> bool std::operator!=(const subtract_with_carry_engine<_UIntType, __w, __s, __r>&, const subtract_with_carry_engine<_UIntType, __w, __s, __r>&)’
+  891 |     operator!=(const std::subtract_with_carry_engine<_UIntType, __w,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:891:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:1119:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r> bool std::operator!=(const discard_block_engine<_RandomNumberEngine, __p, __r>&, const discard_block_engine<_RandomNumberEngine, __p, __r>&)’
+ 1119 |     operator!=(const std::discard_block_engine<_RandomNumberEngine, __p,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:1119:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:1321:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __w, class _UIntType> bool std::operator!=(const independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&, const independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)’
+ 1321 |     operator!=(const std::independent_bits_engine<_RandomNumberEngine, __w,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:1321:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:1582:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __k> bool std::operator!=(const shuffle_order_engine<_RandomNumberEngine, __k>&, const shuffle_order_engine<_RandomNumberEngine, __k>&)’
+ 1582 |     operator!=(const std::shuffle_order_engine<_RandomNumberEngine,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:1582:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:1733:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const uniform_int_distribution<_IntType>&, const uniform_int_distribution<_IntType>&)’
+ 1733 |     operator!=(const std::uniform_int_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:1733:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::uniform_int_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:1961:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const uniform_real_distribution<_IntType>&, const uniform_real_distribution<_IntType>&)’
+ 1961 |     operator!=(const std::uniform_real_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:1961:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::uniform_real_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:2225:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const normal_distribution<_RealType>&, const normal_distribution<_RealType>&)’
+ 2225 |     operator!=(const std::normal_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:2225:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::normal_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:2442:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const lognormal_distribution<_RealType>&, const lognormal_distribution<_RealType>&)’
+ 2442 |     operator!=(const std::lognormal_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:2442:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::lognormal_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:2687:6: note: candidate: ‘template<class _RealType> bool std::operator!=(const gamma_distribution<_RealType>&, const gamma_distribution<_RealType>&)’
+ 2687 |      operator!=(const std::gamma_distribution<_RealType>& __d1,
+      |      ^~~~~~~~
+/usr/include/c++/13/bits/random.h:2687:6: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::gamma_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:2925:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const chi_squared_distribution<_RealType>&, const chi_squared_distribution<_RealType>&)’
+ 2925 |     operator!=(const std::chi_squared_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:2925:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::chi_squared_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:3105:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const cauchy_distribution<_RealType>&, const cauchy_distribution<_RealType>&)’
+ 3105 |     operator!=(const std::cauchy_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:3105:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::cauchy_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:3376:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const fisher_f_distribution<_RealType>&, const fisher_f_distribution<_RealType>&)’
+ 3376 |     operator!=(const std::fisher_f_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:3376:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::fisher_f_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:3605:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const student_t_distribution<_RealType>&, const student_t_distribution<_RealType>&)’
+ 3605 |     operator!=(const std::student_t_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:3605:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::student_t_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:4081:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const binomial_distribution<_IntType>&, const binomial_distribution<_IntType>&)’
+ 4081 |     operator!=(const std::binomial_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:4081:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::binomial_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:4266:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const geometric_distribution<_IntType>&, const geometric_distribution<_IntType>&)’
+ 4266 |     operator!=(const std::geometric_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:4266:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::geometric_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:4527:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const negative_binomial_distribution<_IntType>&, const negative_binomial_distribution<_IntType>&)’
+ 4527 |     operator!=(const std::negative_binomial_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:4527:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::negative_binomial_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:4759:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const poisson_distribution<_IntType>&, const poisson_distribution<_IntType>&)’
+ 4759 |     operator!=(const std::poisson_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:4759:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::poisson_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:4956:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const exponential_distribution<_RealType>&, const exponential_distribution<_RealType>&)’
+ 4956 |     operator!=(const std::exponential_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:4956:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::exponential_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:5173:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const weibull_distribution<_RealType>&, const weibull_distribution<_RealType>&)’
+ 5173 |     operator!=(const std::weibull_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:5173:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::weibull_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:5390:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const extreme_value_distribution<_RealType>&, const extreme_value_distribution<_RealType>&)’
+ 5390 |     operator!=(const std::extreme_value_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:5390:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::extreme_value_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:5670:5: note: candidate: ‘template<class _IntType> bool std::operator!=(const discrete_distribution<_IntType>&, const discrete_distribution<_IntType>&)’
+ 5670 |     operator!=(const std::discrete_distribution<_IntType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:5670:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::discrete_distribution<_IntType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:5954:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const piecewise_constant_distribution<_RealType>&, const piecewise_constant_distribution<_RealType>&)’
+ 5954 |     operator!=(const std::piecewise_constant_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:5954:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::piecewise_constant_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/random.h:6236:5: note: candidate: ‘template<class _RealType> bool std::operator!=(const piecewise_linear_distribution<_RealType>&, const piecewise_linear_distribution<_RealType>&)’
+ 6236 |     operator!=(const std::piecewise_linear_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/random.h:6236:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::piecewise_linear_distribution<_RealType>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:33,
+                 from /usr/include/c++/13/bits/allocator.h:46:
+/usr/include/c++/13/bits/new_allocator.h:222:9: note: candidate: ‘template<class _Up> bool std::operator!=(const __new_allocator<int>&, const __new_allocator<_Tp>&)’
+  222 |         operator!=(const __new_allocator&, const __new_allocator<_Up>&)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/new_allocator.h:222:9: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag>’ is not derived from ‘const std::__new_allocator<_Tp>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/unordered_map:41:
+/usr/include/c++/13/bits/unordered_map.h:2150:5: note: candidate: ‘template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::__cxx1998::operator!=(const unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)’
+ 2150 |     operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unordered_map.h:2150:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/unordered_map.h:2164:5: note: candidate: ‘template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::__cxx1998::operator!=(const unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)’
+ 2164 |     operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unordered_map.h:2164:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/vector:66:
+/usr/include/c++/13/bits/stl_vector.h:2086:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__cxx1998::operator!=(const vector<_Tp, _Alloc>&, const vector<_Tp, _Alloc>&)’
+ 2086 |     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:2086:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::vector<_Tp, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/deque:66:
+/usr/include/c++/13/bits/stl_deque.h:2338:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__cxx1998::operator!=(const deque<_Tp, _Alloc>&, const deque<_Tp, _Alloc>&)’
+ 2338 |     operator!=(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_deque.h:2338:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::deque<_Tp, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/list:65:
+/usr/include/c++/13/bits/stl_list.h:2188:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__cxx1998::operator!=(const __cxx11::list<_Tp, _Alloc>&, const __cxx11::list<_Tp, _Alloc>&)’
+ 2188 |     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_list.h:2188:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::__cxx11::list<_Tp, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/map:63:
+/usr/include/c++/13/bits/stl_map.h:1558:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::__cxx1998::operator!=(const map<_Key, _Tp, _Compare, _Allocator>&, const map<_Key, _Tp, _Compare, _Allocator>&)’
+ 1558 |     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_map.h:1558:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::map<_Key, _Tp, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/map:64:
+/usr/include/c++/13/bits/stl_multimap.h:1179:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::__cxx1998::operator!=(const multimap<_Key, _Tp, _Compare, _Allocator>&, const multimap<_Key, _Tp, _Compare, _Allocator>&)’
+ 1179 |     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_multimap.h:1179:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::multimap<_Key, _Tp, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/set:63:
+/usr/include/c++/13/bits/stl_set.h:1032:5: note: candidate: ‘template<class _Key, class _Compare, class _Alloc> bool std::__cxx1998::operator!=(const set<_Key, _Compare, _Allocator>&, const set<_Key, _Compare, _Allocator>&)’
+ 1032 |     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_set.h:1032:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::set<_Key, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/set:64:
+/usr/include/c++/13/bits/stl_multiset.h:1018:5: note: candidate: ‘template<class _Key, class _Compare, class _Alloc> bool std::__cxx1998::operator!=(const multiset<_Key, _Compare, _Allocator>&, const multiset<_Key, _Compare, _Allocator>&)’
+ 1018 |     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/stl_multiset.h:1018:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::multiset<_Key, _Compare, _Allocator>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/forward_list:40:
+/usr/include/c++/13/bits/forward_list.h:1505:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::__cxx1998::operator!=(const forward_list<_Tp, _Alloc>&, const forward_list<_Tp, _Alloc>&)’
+ 1505 |     operator!=(const forward_list<_Tp, _Alloc>& __lx,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/forward_list.h:1505:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::forward_list<_Tp, _Alloc>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/unordered_set:41:
+/usr/include/c++/13/bits/unordered_set.h:1820:5: note: candidate: ‘template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::__cxx1998::operator!=(const unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&, const unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&)’
+ 1820 |     operator!=(const unordered_set<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unordered_set.h:1820:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/unordered_set.h:1834:5: note: candidate: ‘template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::__cxx1998::operator!=(const unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&, const unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&)’
+ 1834 |     operator!=(const unordered_multiset<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/13/bits/unordered_set.h:1834:5: note:   template argument deduction/substitution failed:
+h.cpp:52:43: note:   ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ is not derived from ‘const std::__cxx1998::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                           ^~~~~~
+In file included from /usr/include/c++/13/debug/bitset:36,
+                 from /usr/include/c++/13/bitset:1739:
+/usr/include/c++/13/debug/safe_iterator.h:499:9: note: candidate: ‘template<class _IteR> bool __gnu_debug::operator!=(const _Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::forward_iterator_tag>::_Self&, const _Safe_iterator<_IteR, std::__debug::multiset<int>, std::bidirectional_iterator_tag>&)’
+  499 |         operator!=(const _Self& __lhs,
+      |         ^~~~~~~~
+/usr/include/c++/13/debug/safe_iterator.h:499:9: note:   template argument deduction/substitution failed:
+h.cpp:52:38: note:   cannot convert ‘i’ (type ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’) to type ‘const __gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::forward_iterator_tag>::_Self&’
+   52 |         for (auto i = bons.rbegin(); i != end_it; ++i) {
+      |                                      ^
+In file included from /usr/include/c++/13/bits/ios_base.h:46,
+                 from /usr/include/c++/13/streambuf:43,
+                 from /usr/include/c++/13/bits/streambuf_iterator.h:35:
+/usr/include/c++/13/system_error:525:3: note: candidate: ‘bool std::operator!=(const error_code&, const error_code&)’
+  525 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/13/system_error:525:32: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::error_code&’
+  525 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/usr/include/c++/13/system_error:530:3: note: candidate: ‘bool std::operator!=(const error_code&, const error_condition&)’
+  530 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/13/system_error:530:32: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::error_code&’
+  530 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/usr/include/c++/13/system_error:535:3: note: candidate: ‘bool std::operator!=(const error_condition&, const error_code&)’
+  535 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/13/system_error:535:37: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::error_condition&’
+  535 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/usr/include/c++/13/system_error:540:3: note: candidate: ‘bool std::operator!=(const error_condition&, const error_condition&)’
+  540 |   operator!=(const error_condition& __lhs,
+      |   ^~~~~~~~
+/usr/include/c++/13/system_error:540:37: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::error_condition&’
+  540 |   operator!=(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/usr/include/c++/13/variant:1305:18: note: candidate: ‘constexpr bool std::operator!=(monostate, monostate)’
+ 1305 |   constexpr bool operator!=(monostate, monostate) noexcept { return false; }
+      |                  ^~~~~~~~
+/usr/include/c++/13/variant:1305:29: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘std::monostate’
+ 1305 |   constexpr bool operator!=(monostate, monostate) noexcept { return false; }
+      |                             ^~~~~~~~~
+/usr/include/c++/13/bits/random.h:3799:3: note: candidate: ‘bool std::operator!=(const bernoulli_distribution&, const bernoulli_distribution&)’
+ 3799 |   operator!=(const std::bernoulli_distribution& __d1,
+      |   ^~~~~~~~
+/usr/include/c++/13/bits/random.h:3799:49: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::bernoulli_distribution&’
+ 3799 |   operator!=(const std::bernoulli_distribution& __d1,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:184:
+/usr/include/c++/13/thread:71:3: note: candidate: ‘bool std::operator!=(thread::id, thread::id)’
+   71 |   operator!=(thread::id __x, thread::id __y) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/13/thread:71:25: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘std::thread::id’
+   71 |   operator!=(thread::id __x, thread::id __y) noexcept
+      |              ~~~~~~~~~~~^~~
+/usr/include/c++/13/bits/allocator.h:222:7: note: candidate: ‘bool std::operator!=(const allocator<int>&, const allocator<int>&)’
+  222 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/allocator.h:222:18: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::allocator<int>&’
+  222 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/map:62:
+/usr/include/c++/13/bits/stl_tree.h:401:7: note: candidate: ‘bool std::operator!=(const _Rb_tree_const_iterator<int>::_Self&, const _Rb_tree_const_iterator<int>::_Self&)’
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/stl_tree.h:401:31: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const std::_Rb_tree_const_iterator<int>::_Self&’
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |                  ~~~~~~~~~~~~~^~~
+/usr/include/c++/13/debug/safe_iterator.h:490:7: note: candidate: ‘bool __gnu_debug::operator!=(const _Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::forward_iterator_tag>::_Self&, const _Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::forward_iterator_tag>::_Self&)’
+  490 |       operator!=(const _Self& __lhs, const _Self& __rhs) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~~~
+/usr/include/c++/13/debug/safe_iterator.h:490:31: note:   no known conversion for argument 1 from ‘std::reverse_iterator<__gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::bidirectional_iterator_tag> >’ to ‘const __gnu_debug::_Safe_iterator<std::_Rb_tree_const_iterator<int>, std::__debug::multiset<int>, std::forward_iterator_tag>::_Self&’
+  490 |       operator!=(const _Self& __lhs, const _Self& __rhs) _GLIBCXX_NOEXCEPT
+      |                  ~~~~~~~~~~~~~^~~~~
