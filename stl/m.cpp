@@ -11,6 +11,45 @@ struct seg {
     }
 };
 
+void print(const set<seg>& m, string s) {
+    cout << s;
+    for (const auto& s : m) cout << s.l << '\t';
+    cout << '\n' << string(s.length(), ' ');
+    for (const auto& s : m) cout << s.len << '\t';
+    cout << '\n';
+}
+
+void print(const map<ll, seg>& mp_l, const map<ll, seg>& mp_r) {
+    cout << "mp_l: ";
+
+    for (const auto& p : mp_l) {
+        size_t c = p.first;
+        ll l = p.second.l;
+        ll len = p.second.len;
+        cout << c << "->";
+        if (l == -1) cout << "[-1 -1]\t";
+        else cout << '[' << l << ' ' << l + len-1 << "]\t";
+    }
+    cout << "\nmp_r: ";
+    for (const auto& p : mp_r) {
+        size_t c = p.first;
+        ll l = p.second.l;
+        ll len = p.second.len;
+        cout << c << "->";
+        if (l == -1) cout << "[-1 -1]\t";
+        else cout << '[' << l << ' ' << l + len-1 << "]\t";
+    }
+    cout << '\n';   
+}
+
+void print(vector<bool>& success) {
+    cout << "success: ";
+    for (const auto& s : success) {
+        cout << s << " ";
+    }
+    cout << '\n';
+}
+
 void erase(const seg& s1, set<seg>& s, map<ll, seg>& mp_l, map<ll, seg>& mp_r) {
     s.erase(s1);
     mp_l[s1.l] = {-1, -1};
@@ -27,63 +66,62 @@ signed main() {
     s.insert({n, 1});
 
     map<ll, seg> mp_l, mp_r;
-    vector<seg> st_call;
+    vector<bool> suc(m+1, false);
+    vector<seg> call_st(m+1);
 
-    while (m--) {
+    for (size_t i = 1; i <= m; ++i) {
         ll k;
         cin >> k;
         if (k > 0) {
-            cout << '\n';
-            // auto it = s.lower_bound({k, 0});
-            auto it = prev(s.end());
-            if (it != s.end()) {
-                ll id = it->l;
-                ll len = it->len; 
-                s.erase(it);
-                mp_l[id] = {-1, -1};
-                mp_r[len-1] = {-1, -1};
-                if (k < len) {
-                    s.insert({len-k, id+k});
-                    mp_l[id+k-1] = {len-k+1, id+k};
-                    mp_r[id+len-1] = {len-k+1, id+k};
-                    // st_call.push_back({len-k, id+k});
-                    // cout << "new free space from " << st_call.back().l << " to: " << st_call.back().l + st_call.back().len-1 << '\n';
+            if (s.size() > 0) {
+                auto it = prev(s.end());
+                ll l = it->l;
+                ll len = it->len;
+                seg new_seg = {len-k, l+k};    
+                if (k <= len) {
+                erase({len, l}, s, mp_l, mp_r);
+                if (k != len) {
+                    s.insert(new_seg);
+                    mp_l[l+k] = {len-k, l+k};
+                    mp_r[l+len-1] = {len-k, l+k};
                 }
-            }
+                call_st[i] = {k, l};
+                suc[i] = true;
+                cout << call_st[i].l << '\n';
+                } else cout << -1 << '\n';
+            } else cout << -1 << '\n';
         }
-        // else {
-        //     if (st_call.size() > -1*k) {
-        //         auto it = st_call[-1*k-1];
-        //         ll len = it.len;
-        //         ll id = it.l;
+        else {
+            ll t = -k;
+            if (!suc[t]) continue;
+            seg to_del = call_st[t];
+            ll l = to_del.l;
+            ll len = to_del.len;
+        
+            ll new_l = l;
+            ll new_len = len;
+            
+            auto l_it = mp_r.find(l-1);
+            if (l_it != mp_r.end() && l_it->second.len > 0) {
+                new_l = l_it->second.l;
+                new_len += l_it->second.len;
+                to_del = l_it->second;
+                erase(to_del, s, mp_l, mp_r);
+            }
 
-        //         if (mp_l[len+id-1].l > 0) {
-        //             len = mp_l[len+id-1].l-id+1;
-        //         }
+            auto r_it = mp_l.find(l+len);
+            if (r_it != mp_l.end() && r_it->second.len > 0) {
+                new_len += r_it->second.len;
+                to_del = r_it->second;
+                erase(to_del, s, mp_l, mp_r);
+            }
 
-        //         if (mp_l[len+id-1].len > 0) {
-        //             ll len_r = mp_l[len+id-1].len;
-        //             erase(mp_l[len+id-1], s, mp_l, mp_r);
-        //             len += len_r;
-        //         }
-
-        //         if (mp_r[id-1].len > 0) {
-        //             ll len_l = mp_r[id-1].len;
-        //             erase(mp_r[id-1], s, mp_l, mp_r);
-        //             len+=len_l;
-        //             id = len_l;
-        //         }
-
-        //         s.insert({len, id});
-        //         cout << "free from " << id << " to: " << id + len-1 << '\n';
-        //         mp_l[id] = {len, id};
-        //         mp_r[len+id-1] = {len, id};
-        //     }
-        // }
-        cout << "mp_l: ";
-        for (auto i : mp_l) cout << i.first << '\t';
-        cout << "\nmp_r: ";
-        for (auto i : mp_r) cout << i.first << '\t';
-        cout << '\n';   
+            s.insert({new_len, new_l});
+            mp_l[new_l] = {new_len, new_l};
+            mp_r[new_l+new_len-1] = {new_len, new_l}; 
+        }
+        // print(s, "memory: ");
+        // print(mp_l, mp_r);
+        // print(suc);
     }
 }
